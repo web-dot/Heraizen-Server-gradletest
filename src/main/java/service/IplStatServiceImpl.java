@@ -3,6 +3,7 @@ package service;
 import java.util.ArrayList;
 import java.util.List;
 
+import Domain.Player;
 import Domain.Team;
 import util.JsonReaderUtil;
 
@@ -41,6 +42,30 @@ public class IplStatServiceImpl implements IplStatService {
             teamlabels.add(team.label);
         }
         return teamlabels;
+    }
+
+
+    @Override
+    public List<String> getAllTeams() {
+        List<String> teams = new ArrayList<>();
+        for(Team team : teamList) {
+            teams.add(team.name);
+        }
+        return teams;
+    }
+
+    @Override
+    public List<String> getAllPlayers() {
+        List<String> playerNames = new ArrayList<>();
+        List<Player> o = null;
+        for(Team team : teamList) {
+            o = team.players;
+            for(Object obj : o) {
+                Player p = (Player)obj;
+                playerNames.add(p.name);
+            }
+        }
+        return playerNames;
     }
 
 }

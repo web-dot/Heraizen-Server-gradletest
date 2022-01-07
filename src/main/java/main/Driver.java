@@ -13,7 +13,8 @@ public class Driver {
         
         IplStatService statService = IplStatServiceImpl.getInstance();
         System.out.println(statService.getTeamLabels());
-
+        System.out.println(statService.getAllTeams());
+        System.out.println(statService.getAllPlayers());
     }
 
 }
