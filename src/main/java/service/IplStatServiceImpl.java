@@ -18,6 +18,7 @@ public class IplStatServiceImpl implements IplStatService {
     
     private IplStatServiceImpl() {
         teamList = JsonReaderUtil.loadFromJsonFile();
+        //System.out.println(teamList);
     }
     
     //will return instane of this class
