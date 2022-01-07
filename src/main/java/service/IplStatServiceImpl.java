@@ -67,5 +67,17 @@ public class IplStatServiceImpl implements IplStatService {
         }
         return playerNames;
     }
+    
+    @Override
+    public String getTeamByLabel(String label) {
+       String teamOfLabel="";
+       for(Team team : teamList) {
+           if(team.label.equals(label)) {
+               teamOfLabel=team.name;
+           }
+       }
+        return teamOfLabel;
+    }
+    
 
 }

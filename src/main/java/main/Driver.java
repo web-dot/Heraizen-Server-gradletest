@@ -15,6 +15,7 @@ public class Driver {
         System.out.println(statService.getTeamLabels());
         System.out.println(statService.getAllTeams());
         System.out.println(statService.getAllPlayers());
+        System.out.println(statService.getTeamByLabel("KKR"));
     }
 
 }

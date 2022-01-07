@@ -7,4 +7,5 @@ public interface IplStatService {
     List<String> getTeamLabels();
     List<String> getAllTeams();
     List<String> getAllPlayers();
+    String getTeamByLabel(String label);
 }
